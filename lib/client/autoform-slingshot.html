@@ -1,14 +1,14 @@
 <template name="afSlingshot">
-  <div class="form-group file-upload" data-schema-key="{{schemaKey}}" data-id="{{templateInstanceId}}">
+  <div class="form-group file-upload mt-2" data-schema-key="{{schemaKey}}" data-id="{{templateInstanceId}}">
     {{#if fileUpload}}
     {{#with fileUpload}}
     {{> Template.dynamic template=template data=data}}
     {{/with}}
     <br/>
-    <a class="file-upload-clear" file-input="{{name}}"><i class="fa fa-times"></i> {{removeLabel}}</a>
+    <a class="file-upload-clear cursor-pointer border rounded p-2  border-gray-300 focus:border-gray-400 focus:ring-0 " file-input="{{name}}"><i class="fa fa-times"></i> {{removeLabel}}</a>
     {{else}}
     <label for="file-{{name}}-{{templateInstanceId}}">
-      {{label}}
+      <span class="cursor-pointer border rounded p-2  border-gray-300 focus:border-gray-400 focus:ring-0 ">{{label}}</span>
       <input class="hidden" id="file-{{name}}-{{templateInstanceId}}" file-input="{{name}}" type="file" accept="{{accept}}" />
     </label>
     {{/if}}
