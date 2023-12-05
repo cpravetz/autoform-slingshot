@@ -202,8 +202,8 @@ Template['afSlingshot_ionic'].events _.extend(events, {
   'click [data-action=showActionSheet]': (event) ->
     IonActionSheet.show(
       buttons: []
-      destructiveText: i18n 'destructive_text'
-      cancelText: i18n 'cancel_text'
+      destructiveText: 'Delete'
+      cancelText: 'Cancel'
       destructiveButtonClicked: (()->
         SlingshotAutoformFileCache.remove({template: this.template, field: this.field});
         true
